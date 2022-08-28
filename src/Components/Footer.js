@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import GetIcons from './Icons/GetIcons'
+import ScrollToTopBtn from './ScrollToTopBtn'
 
 function Footer() {
   const [version, setVersion] = useState('')
@@ -24,10 +25,11 @@ function Footer() {
           className="mr-2"
           aria-label="LinkFree repository on GitHub"
         >
-          <GetIcons iconName="github" size={16} />
+          <GetIcons className="text-gray-900" iconName="github" size={16} />
         </Link>
         <span>v{version}</span>
       </p>
+      <ScrollToTopBtn />
     </footer>
   )
 }
